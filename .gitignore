@@ -10,3 +10,5 @@ data/*.pkl
 .DS_Store
 Thumbs.db
 /data/
+
+__pycache__/
