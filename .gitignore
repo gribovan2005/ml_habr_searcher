@@ -1,0 +1,12 @@
+.eggs/
+
+data/*.joblib
+data/*.pkl
+
+.vscode/
+/logs/
+/airflow/logs/
+/airflow/plugins/
+.DS_Store
+Thumbs.db
+/data/

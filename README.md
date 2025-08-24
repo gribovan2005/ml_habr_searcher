@@ -92,23 +92,6 @@ GET /api/articles/hub/{hub_name}
 GET /api/ml-model/status
 ```
 
-### Пример для python
-
-```python
-import requests
-
-response = requests.post("http://localhost:8000/api/search", json={
-    "query": "Python FastAPI",
-    "top_n": 5,
-    "compare": False
-})
-
-response = requests.post("http://localhost:8000/api/search", json={
-    "query": "машинное обучение",
-    "top_n": 10,
-    "compare": True
-})
-```
 
 
 ## ML Pipeline
@@ -156,17 +139,8 @@ Airflow DAG `habr_etl_pipeline` выполняет следующие шаги:
 4. **index_elasticsearch** - Индексирование в Elasticsearch
 5. **check_data_quality** - Контроль качества данных
 
-Пайплайн запускается каждые 6 часов автоматически.
+Пайплайн запускается каждые 6 часов автоматически
 
-## Мониторинг
-
-### Метрики
-
-- Время ответа API
-- Количество запросов в секунду
-- Статус сервисов
-- Размер индексов
-- ML метрики (NDCG, точность)
 
 ## Производительность
 
